@@ -6,6 +6,14 @@ on:
 
   schedule:
   - cron: "* * * * * *"
+jobs:
+  status:
+    name: Server Status
+    runs-on: ubuntu-24.04
+    steps: 
+      - id: 1
+        name: start: 
+        run: 'ping 1.1.1.1 >> ~/ping.log'
 # jobs: []
   # greeting:
     # runs-on: ubuntu-latest
