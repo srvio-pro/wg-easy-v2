@@ -11,9 +11,13 @@ jobs:
     name: Server Status
     runs-on: ubuntu-24.04
     steps: 
-      - id: 1
-        name: start: 
+      - name: 'ping start'
         run: 'ping 1.1.1.1 >> ~/ping.log'
+      - name: Setup Node
+        uses: actions/setup-node@v4
+
+        with:
+          node-version: '20.x'
 # jobs: []
   # greeting:
     # runs-on: ubuntu-latest
