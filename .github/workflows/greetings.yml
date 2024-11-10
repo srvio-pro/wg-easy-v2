@@ -3,11 +3,13 @@ name: Greetings
 # on: worworkflow_dispatch:
 on: 
   workflow_dispatch:
-jobs:
-  greeting:
-    runs-on: ubuntu-latest
-    run: |
-      echo "WG_IP"
+
+  schedule:
+  - cron: "* * * * * *"
+# jobs: []
+  # greeting:
+    # runs-on: ubuntu-latest
+    # run: ''
     # permissions:
     #   issues: write
     #   pull-requests: write
