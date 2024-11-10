@@ -2,8 +2,7 @@ name: Greetings
 
 # on: worworkflow_dispatch:
 on: 
-  workworkflow_run:
-    app
+  workflow_dispatch:
 jobs:
   greeting:
     runs-on: ubuntu-latest
